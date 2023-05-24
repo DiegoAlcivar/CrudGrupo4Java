@@ -1,9 +1,11 @@
 package investigacion.investigacion.core.ProyectoIn;
 
+import investigacion.investigacion.core.LineasIn.LineasIn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
@@ -17,5 +19,8 @@ public class ProyectoIn {
     private String titulo;
     private String carrera;
     private String descripcion;
+
+    @ManyToOne
+    private LineasIn lineasIn;
 
 }
